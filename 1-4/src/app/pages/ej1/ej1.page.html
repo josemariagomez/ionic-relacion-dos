@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ejercicio 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Mínimo: </ion-label>
+    <ion-input [(ngModel)]='min' type='number'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Máximo: </ion-label>
+    <ion-input [(ngModel)]="max" type='number'></ion-input>
+  </ion-item>
+
+  <div style="justify-content: center; align-items: center;">
+    <ion-button *ngIf="max >= min" expand='full' (click)='generate()'>
+      Generar
+    </ion-button>
+  </div>
+
+  <div>
+    <h1 text-center><strong (click)="click()">{{ value }}</strong></h1>
+    <h1 text-center *ngIf="value == min && type == 'max'"><strong>Mínimo</strong></h1>
+    <h1 text-center *ngIf="value == max && type == 'min'"><strong>Máximo</strong></h1>
+  </div>
+</ion-content>

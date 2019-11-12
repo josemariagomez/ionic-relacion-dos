@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ejercicio 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Metros</ion-label>
+    <ion-input [(ngModel)]='m' (keyup)='fromM()' type='number'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Centímetros</ion-label>
+    <ion-input [(ngModel)]='cm' (keyup)='fromCm()' type='number'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Pulgadas</ion-label>
+    <ion-input [(ngModel)]='pul' (keyup)='fromPul()' type='number'></ion-input>
+  </ion-item>
+
+</ion-content>
